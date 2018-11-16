@@ -28,23 +28,23 @@ namespace CCC_29
             while(i < 5)
             {
 
-            StreamReader reader = new StreamReader(readerpath);
-            StreamWriter writer = new StreamWriter(writerpath);
-            while ((Input = reader.ReadLine()) != null)
-            {
+                StreamReader reader = new StreamReader(readerpath);
+                StreamWriter writer = new StreamWriter(writerpath);
+                while ((Input = reader.ReadLine()) != null)
+                {
 
-                string[] input = Input.Split(' ');
-                int r1 = Convert.ToInt32(input[0]);
-                int r2 = Convert.ToInt32(input[3]);
-                int c1 = Convert.ToInt32(input[1]);
-                int c2 = Convert.ToInt32(input[4]);
-                double ratio = Convert.ToDouble(input[5]);
-                int x = Convert.ToInt32(r1 + ratio * (r2 - r1));
-                int y = Convert.ToInt32(c1 + ratio * (c2 - c1));
+                    string[] input = Input.Split(' ');
+                    int r1 = Convert.ToInt32(input[0]);
+                    int r2 = Convert.ToInt32(input[3]);
+                    int c1 = Convert.ToInt32(input[1]);
+                    int c2 = Convert.ToInt32(input[4]);
+                    double ratio = Convert.ToDouble(input[5]);
+                    int x = Convert.ToInt32(r1 + ratio * (r2 - r1));
+                    int y = Convert.ToInt32(c1 + ratio * (c2 - c1));
 
-                writer.WriteLine($"{x} {y}");
+                    writer.WriteLine($"{x} {y}");
 
-            }
+                }
             }
             Console.ReadKey();
         }
